@@ -1,0 +1,236 @@
+body{
+    font-family: "Raleway", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+p{
+    font-family: "Open Sans", sans-serif;
+    color: #86878b;
+    font-size: 14px;
+    line-height: 20px;
+}
+.container{
+    text-align: center;
+}
+h2{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: 43px;
+    font-weight: normal;
+    margin-top: 100px;
+}
+h2::before{
+    content: "";
+    position: absolute;
+    background: #ff8c2c;
+    height: 2px;
+    width: 65px;
+    top: 145%;
+    left: 50%;
+    margin-left: -32px;
+}
+.container h3{
+    font-size: 20px;
+    line-height: 24px;
+}
+.container .row:first-child p{
+    margin: 50px;
+}
+.container .row:first-child .col-md-4 p{
+    margin-top: 45px;
+}
+.img{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    margin-top: 30px;
+}
+.container .row:nth-child(2) .col-md-4:first-child .img{
+    background: url("../png/bulb.png");
+}
+.container .row:nth-child(2) .col-md-4:nth-child(2) .img{
+    background: url("../png/keyboard.png");
+}
+.container .row:nth-child(2) .col-md-4:last-child .img{
+    background: url("../png/lightning.png");
+}
+.flexbox{
+    background: #f5f5f5;
+    text-align: center;
+    border: 1px solid transparent;
+    margin-top: 90px;
+    min-width: 1131px;
+}
+.flexbox .caption_block{
+    display: block;
+    margin: 0 auto;
+}
+.flexbox .caption_block h2{
+    margin-top: 95px;
+}
+.caption_block p{
+    margin-top: 50px;
+}
+.offer_block{
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: -o-flex;
+    display: -moz-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+.first_block p, .second_block p, .third_block p{
+    width: 344px;
+    margin: 0;
+}
+.second_block, .third_block{
+    margin-left: 42px;
+}
+.tariff p{
+    background: #303030;
+    color: white;
+    padding: 15px 0 15px 0;
+    border-bottom: 1px solid white;
+}
+.tariff p:first-child{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+}
+.tariff p:nth-child(2){
+    font-family: "Raleway", sans-serif;
+    font-size: 94px;
+    font-weight: bold;
+    line-height: 60px;
+    padding: 25px 0 0 0;
+}
+.tariff p:nth-child(2):first-letter{
+    font-size: 35px;
+}
+.tariff p:nth-child(3){
+    color: #919191;
+    font-style: italic;
+    border-bottom: 4px solid #ff8c2c;
+}
+.tariff_description p{
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    background: white;
+    padding: 10px 0 5px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+.tariff_description .popular{
+    color: white;
+    background: #ff8c2c;
+    font-weight: bold;
+    padding-top: 6px;
+    border-bottom: none;
+}
+@media(max-width: 767px){
+    .flexbox{
+        max-width: 760px;
+        min-width: 550px;
+
+    }
+    .offer_block{
+        flex-direction: column;
+    }
+    .first_block, .second_block, .third_block{
+        margin: 40px 0 0 0;
+    }
+
+}
+.grid{
+    display: grid;
+
+    grid-template-columns: 274px 394px 394px;
+    grid-template-areas:
+            "caption caption caption"
+            "review1 review2 review3";
+    justify-content: center;
+}
+.grid .caption_block{
+    grid-area: caption;
+}
+.review:nth-child(2){
+    grid-area: review1;
+}
+.review:nth-child(3){
+    grid-area: review2;
+}
+.review:last-child{
+    grid-area: review3;
+}
+.grid .caption_block {
+    text-align: center;
+}
+.review:nth-child(3), .review:last-child{
+    margin-left: 120px;
+}
+.review{
+    margin-bottom: 100px;
+}
+.review p{
+    position: relative;
+    background: #f5f5f5;
+    border-radius: 5px;
+    padding: 16px 12px;
+    margin-top: 40px;
+}
+.review p::before{
+    content: "";
+    position: absolute;
+    top: 130px;
+    left:22px;
+    border: 10px solid transparent;	border-top: 15px solid #f5f5f5;
+}
+.review h3{
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    margin: 40px 0 0 0;
+}
+.review h3::before{
+    content: "";
+    position: absolute;
+    top: -11px;
+    left: -90px;
+    background: #86878b;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+.review h4{
+    font-family: "Open Sans", sans-serif;
+    color: #86878b;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+.review h3, .review h4{
+    margin-left: 90px;
+}
+@media(max-width: 767px){
+    .grid{
+        min-width: 550px;
+        grid-template-columns: 150px 245px 150px;
+        grid-template-areas:
+                "caption caption caption"
+                ". review1 ."
+                ". review2 ."
+                ". review3 .";
+    }
+    .review:nth-child(3), .review:last-child{
+        margin-left: 0;
+    }
+    .caption_block h2{
+        max-width: 500px;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+}
